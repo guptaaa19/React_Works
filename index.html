@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="./index.css" />
+    <title>Basics of Html & Js</title>
+</head>
+<body>
+    <h1>Hello from above the root!</h1>
+    <div id ="root">
+        <h1>Srishti is here!</h1>
+    </div>
+    <h1>Hello from below the root!</h1>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script src="./App.js"></script> 
+
+<!-- order of files matter alot 
+for eg: if you cut paste the app.js in index.html and paste it above in the body then it will throw an error("react is not defined")
+order of these files are always in sequence when they are imported -->
+
+
+<!-- react is called library because it can work in the small portion of your existing app, it is just a js library, 
+it is just js -->
+
+</body>
+</html>
