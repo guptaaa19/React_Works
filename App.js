@@ -1,4 +1,4 @@
-//App.js ep04 namaste react
+//App.js ep04 from namaste react
 
 import React from "react";
 import ReactDOM from "react-dom/client";
