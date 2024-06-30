@@ -1,0 +1,64 @@
+# Ep0701:
+
+dependency array : changes the behaviour of its render. using dependency array is optional.
+if no dependency array => useEffect is called on every render.
+if empty dependency array => useEffect is called on initial render(just once).
+if somethong inside dependency array => will be called only when the dependency changes or updates.
+useEffect(()=>{
+    console.log("useEffect Rendered")
+},
+[btnNameReact]); 
+
+# Ep0702: 
+useState
+- always call useState inside the body fn.
+- used to create local state variables inside your functional components.
+- always call them on the top.
+- never use them inside in if-else, for loop and inside function (inside a condition)
+
+# Ep0703:
+
+createBrowserRouter: creates a routing configuration;
+                    - takes in a list of path(it is nothing but an object)
+configuration defines what will happen in a specific route. (what will happen when we will call about)
+
+RouterProvider: will actually provide this routing configuration(appRouter) to our app 
+
+# Ep0704:
+
+Children Router: here the header always sticks on the top even when we navigate to different routes such as about, contactus etc.
+
+Before children routing:
+const appRouter = createBrowserRouter([
+    {
+        path: "/",
+        element: <AppLayout />,
+        errorElement : <Error />
+    },
+    {
+        path: "/about",
+        element: <About />,
+    },
+    {
+        path: "/contact",
+        element:  <ContactUs />,
+    },
+])
+
+Outlet: it is a component, it will be filled with children acccording to what page we are on.Eg: if im on about then in Outlet /About will be filled. About component will replace Outlet acccording to the path.
+
+In react, never ever use anchor tag, because whole page got refreshed(to make fastt transction, i want to navigate to a new page without even re-reloading it)
+For this we will use Link of reacr-router-dom works same as of anchor tag, it does not refreshes the page. Its superfast.
+
+React is called a single page as when we are switching from different routes, we are changing between differet components. While navigating we do not refreash our pages.
+
+# There are two types of routing:
+1. server-side
+2. client-side : no network calls (which we are doing right now)
+
+
+# Ep0705:{Another api for individual resturant}
+
+
+Link is wrapper of anchor tag. spl type of link that keeps from refreshes. Behind the sceces link is anchor tag only.
+

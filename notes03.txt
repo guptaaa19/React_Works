@@ -1,0 +1,12 @@
+start script: it is for starting in development mode. can also write npm start.
+
+build script: it is for starting in production mode. but npm build wont work.
+
+jsx: it is not part of react. We can write react without jsx as we did in ep01 and build big appl. It just makes our code easy to read write. It is HTML/XML LIKE syntax.
+prevents cross-site scripting attacks fro us(happens in case of badapi), sanitizes our data before rendering.
+
+React componenets : 2 types
+1. Class componenets: uses js classes
+2. Functional componenets: uses js functions (just a noraml js function)
+
+react.render is replacing the code in the root.

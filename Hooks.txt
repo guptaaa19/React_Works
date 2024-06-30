@@ -1,0 +1,39 @@
+# Hooks: 
+- A normal js function given to us by react. 
+- It is pre-built
+- has some super-powers
+- has some logic written behind the scenes
+- is a utility fn given by react to us 
+
+2 imp hooks :
+useState() : Superpowerful state variables in react
+useEffect() :
+
+# whenever a state variables changes, react re-renders my components.
+
+# REACT BEHIND THE SCENES:
+Reconcilatoin Algorithm (React Fibre)
+
+concept of virtual dom pre-existed but the react introduced efficient algorithm to effficient use in our application
+
+# Virtual dom
+- Not an actual dom
+- Representation of actual dom
+- It is normal js object
+
+# Real dom
+- They are tags in our return tag.
+
+# github link : acdlite/react-fiber-architecture
+
+# const [ listofRes, setListofRes ] = useState(reslist);
+here we de-structuring the array on the fly
+setListofRes: it is used to trigger the diff algorithm and re-render the UI (when any changes occur)
+
+useState : Return an array
+
+const arr = useState(reslist);
+const [ listofRes, setListofRes ] = arr; //it will work
+
+const listofRes = arr[0];
+const listofRes = arr[1];

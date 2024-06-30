@@ -1,0 +1,36 @@
+# props: Acronym for properties. They are just like passing normal arguments to a function.
+
+# config driven ui: ui is driven by a config(data) which is controlled by backend. For eg: every city will have different offers and carousels based on the location.
+
+frontend : ui layer + data layer 
+
+# whenever you use map always have a key in it otherwise it will give error {index.js:1 Warning: Each child in a list should have a unique "key" prop.}
+
+react optimizes its render cycle
+
+react says do not use index for keys since order is subject to change
+
+
+#Two types of Export/import
+- Default Export/import:
+export default components;
+import components from path;
+
+- Named Export/import:
+export const components;
+import {components} from path;
+
+
+
+
+
+
+kafhai garam
+thoda sa tel
+thore geera
+4 lasun (cutting)..laal krana h and pyaaz
+tej patta , mircha 2
+thoda haldi
+paani sahit rice
+salt
+dahi daal ke garm 

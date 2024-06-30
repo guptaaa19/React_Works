@@ -1,0 +1,61 @@
+#Ep06 part 02
+How do we make api calls inside reactjs?
+2 ways how web apps / ui appl fetch data from backend:
+1. When our loads -> make an api can to fetch the data -> with the  data render it to the ui 
+loads -> api call -> render (if page takes 500ms to make an api call then our page will wait and render the ui after 500ms).
+2. as soon as the page loads -> quickly render it on the ui -> then make an api call -> rerender our appl with the fetched data once again
+loads ( with shimmer ui )-> render -> api call -> re-render
+
+In react we will always use the second approach, it is a better approach , gives a better ux.(avoids the lag and the gitteriness).
+We are rendering twice but doesnt matter as react has one of the best rendering mechanism, its render cycles are very fast.
+
+#Ep06 part 03
+
+useEffect: will take two arguments
+1. callback function {} -> it will be called after the component(body) renders  // main purpose of our useEffect hook , we use it when we want to render sth later like the rendering after the body component. // we can check its working with the use of the debugger in the console 
+2. dependency array []
+
+useEffect helps in second approach of api calls
+
+
+logic of fetchng the data is same as we used to do in js
+
+fetch() : will return a promise thennnnn we resolve the promise or just write async
+
+error: Access to fetch at 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.624480699999999&page_type=DESKTOP_WEB_LISTING' from origin 'http://localhost:1234' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+//read about cors from yt of abhay sahini
+
+cors extension will help in bypassing the cors error
+
+#Ep06 part 04
+
+is displaying a spinner a good way while our api loads?
+NO, today we use shimmer ui for this instead.
+
+Shimmer UI is an example of condtional rendering. Rendering on the basis of condition.
+
+Shimmer UI: it resembles the actual ai and shows how quickly our app loads. Its like we load fake page until we have actual data from the api. To enhance the user experience. Even yt also uses it.
+
+#Ep06 part 05
+
+useState : 
+
+let btnName = "Logout"; if you are trying to change the login to logout then js doesnt work since it is unable to keep track of the changes made. hence we use useState to update the state and refreshes the header component. triggers the reconcilation cycle.
+it re-renders the whole of the header instead of just the login button.
+
+How does a const value is getting updated, defying the js principle?
+const [btnNameReact, setBtnNameReact] = useState('Login');
+when we call the setBtnNameReact then the Head fn is called again,(but only the button changes) just like re-rendering and this time value is updated to logout. all these things are happening behind the scenes.(diff algo working here then the reconsilation making react fast) 
+
+#Ep06 part 06
+search button
+
+onChange and e nhi samaj aaya
+searchText : whenever we change the local state variable react rerenders the component.(as we write cafe in search box)
+body rendered get console logged 4 times because of this.
+
+#Ep06 part 07
+Solving the search bug as it does not let us search once more after a search is done since our card size reduces to the search size
+
+solution is to keep a copy of the filteredlist instead of putting in setFilteredList
+
